@@ -1,0 +1,36 @@
+{
+    "name": "webpack-plugin-output-babel",
+    "version": "0.0.1",
+    "description": "Apply Babel transforms to ouptut chunks.",
+    "author": "Wojtek Ruszczewski <webpack-output-babel@wr.waw.pl>",
+    "keywords": ["webpack", "plugin", "output", "babel"],
+    "scripts": {
+        "build": "webpack --env=p",
+        "test": "eslint . --ext=js --ext=jsx && mocha --opts tests/mocha.opts",
+        "prepublish": "npm run build && npm test"
+    },
+    "main": "dist/main.es5.js",
+    "main:es5": "dist/main.es5.js",
+    "main:es6": "dist/main.es6.js",
+    "main:es7": "main.jsx",
+    "dependencies": {
+        "babel-core": "^6.5.2",
+        "webpack-sources": "^0.1.1"
+    },
+    "webpack": {
+        "library": "OutputBabelPlugin",
+        "target": "node",
+        "externals": {
+            "babel-core": "commonjs babel-core",
+            "webpack-sources": "commonjs webpack-sources"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wrwrwr/webpack-output-babel"
+    },
+    "bugs": {
+        "url": "https://github.com/wrwrwr/webpack-output-babel/issues"
+    },
+    "license": "MIT"
+}
