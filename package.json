@@ -1,6 +1,6 @@
 {
     "name": "webpack-plugin-output-babel",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Apply Babel transforms to ouptut chunks.",
     "author": "Wojtek Ruszczewski <webpack-output-babel@wr.waw.pl>",
     "keywords": ["webpack", "plugin", "output", "babel"],
@@ -16,6 +16,9 @@
     "dependencies": {
         "babel-core": "^6.5.2",
         "webpack-sources": "^0.1.1"
+    },
+    "peerDependencies": {
+        "webpack": "^2.1.0"
     },
     "webpack": {
         "library": "OutputBabelPlugin",

@@ -33,7 +33,7 @@ Installation
 ------------
 
 ```bash
-npm install webpack-plugin-output-babel
+npm install webpack webpack-plugin-output-babel
 ```
 
 Caveats
